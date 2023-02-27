@@ -11,8 +11,8 @@
 
 #### 使用前
 请在main.tex中修改如下参数
-```latex
 e.g.
+```latex
 \documentclass[AcMaster]{BJTU-thesis}      %%%    选择模板为学硕
 ```
 
