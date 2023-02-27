@@ -1,0 +1,84 @@
+%%%%%%%%%%%% 选择学位类型：学硕%%%%%%%%%%
+\documentclass[AcMaster]{BJTU-thesis}  
+%%EnMaster专硕
+%%AcMaster学硕
+ %%Doctor学博
+
+%%%%%%%%%%%%%%%%%填写封面信息%%%%%%%%%%%%%%%%%%%%%%%%
+\author{张三}                                  %作者姓名
+\studentNumber{11111111}                       %作者学号
+\advisor{李四}                                 %导师姓名
+\advisorTitle{教授}                            %导师职称
+\degreeType{工学}                              %学位类别
+\major{网络空间安全}                         %所属专业
+\researchArea{软件安全}                        %研究方向
+\title{论文题目}                               %论文题目
+\englishtitle{The Title in English.}           %论文题目英文
+\datetime{2019年6月}                           %编辑日期
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setmainfont{Times New Roman}
+
+\begin{document}
+	\makecover
+	\makeAuthorization
+	\makeInfo
+	\include{chapters/thanks} 									 %致谢部分
+	\include{chapters/abstract}   								 %中文摘要
+	\include{chapters/englishabstract}  							 %英文摘要
+     \include{chapters/preface}                                             %序言
+
+	
+	
+	\tableofcontents
+     \newpage\pagenumbering{arabic}
+
+     %正文部分
+     \include{chapters/chapter01} 								%引言
+     \include{chapters/chapter02} 								%第二章
+	\include{chapters/chapter03} 								%第三章
+	\include{chapters/chapter04} 								%第四章
+	\include{chapters/chapter05} 								%第五章
+
+
+
+
+	\nocite{*}
+	\bibliography{reference/ref}
+
+     \backmatter
+	\begin{appendix}
+		\input{chapters/appendix01}
+	\end{appendix}
+
+     \include{chapters/index}	
+
+	\include{chapters/mresume}
+
+	\include{chapters/statement} 	
+
+     \include{chapters/dataset}						
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
