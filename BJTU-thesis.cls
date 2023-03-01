@@ -426,9 +426,9 @@ headheight=15pt
 
 
 % 定公式、图、表编号为"3-1"的形式，即分隔符由.变为短杠
-\renewcommand\theequation{\arabic{chapter}.\arabic{equation}}
-\renewcommand\thefigure{\arabic{chapter}.\arabic{figure}}
-\renewcommand\thetable{\arabic{chapter}.\arabic{table}}
+\renewcommand\theequation{\arabic{chapter}-\arabic{equation}}
+\renewcommand\thefigure{\arabic{chapter}-\arabic{figure}}
+\renewcommand\thetable{\arabic{chapter}-\arabic{table}}
 
 % 颜色宏包
 \RequirePackage{xcolor}
