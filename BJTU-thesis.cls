@@ -190,11 +190,37 @@
 }{}
 
 
-%%定义正文的页眉页脚格式
+%%%%%%%%%  单面打印  %%%%%%%%%% 
+% 定义正文的页眉页脚格式
+% \def\BJTU@chapter{}
+% \fancypagestyle{BJTU@heading}{
+% 	\fancyhf{}
+% 	% 左页眉
+%         \fancyhead[L]{
+%         \small
+% 		\if@isDoctor
+% 		北京交通大学博士学位论文
+% 		\else
+%         \if@isAcMaster
+%         {北京交通大学硕士学位论文}
+%         \else
+%         {北京交通大学硕士专业学位论文}
+%         \fi
+% 		\fi
+% 	}
+% 	\fancyhead[R]{\small\leftmark}
+%         % 页码字体大小
+% 	\fancyfoot[C]{\footnotesize\thepage}
+% }
+
+
+%%%%%%%%%  双面打印  %%%%%%%% 
+% 定义正文的页眉页脚格式
 \def\BJTU@chapter{}
 \fancypagestyle{BJTU@heading}{
 	\fancyhf{}
-	\fancyhead[L]{
+	\fancyhead[CE]{
+        \small
 		\if@isDoctor
 		北京交通大学博士学位论文
 		\else
@@ -205,8 +231,9 @@
         \fi
 		\fi
 	}
-	\fancyhead[R]{\leftmark}
-	\fancyfoot[C]{\thepage}
+	\fancyhead[CO]{\small\leftmark}
+        % 页码字体大小
+	\fancyfoot[C]{\footnotesize\thepage}
 }
 
 
