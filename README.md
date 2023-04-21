@@ -10,12 +10,22 @@
 - 学术型博士研究生 (Doctor)
 
 #### 使用前
+##### 必须修改
 请在main.tex中修改如下参数
 
 e.g.
 ```latex
 \documentclass[AcMaster]{BJTU-thesis}      %%%    选择模板为学硕
 ```
+
+##### 单面论文和双面论文
+1. 请在main.tex中加入`twoside`参数来启用双面论文模板
+
+```latex
+\documentclass[AcMaster,twoside]{BJTU-thesis} 
+```
+
+2. 在`BJTU-thesis.cls`文件中将单面打印换成双面打印
 
 #### 编译前
 请选择`XeLaTeX`作为编译器进行编译，Overleaf和TeX live都可以使用
