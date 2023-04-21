@@ -262,7 +262,9 @@ headheight=15pt
 
 %% 设置一级章节格式
 \ctexset{section={
-		format={\raggedright \bfseries \sffamily \zihao{4}},
+        number = {\arabic{chapter}.\arabic{section}},
+        % format={\raggedright \sffamily \bfseries \zihao{4}},
+		format={\raggedright \heiti \zihao{-3}},
 		beforeskip = 28bp plus 1ex minus .2ex,
 		afterskip = 24bp plus .2ex,
 		fixskip = true,
@@ -271,10 +273,12 @@ headheight=15pt
 
 % 设置二级标题格式
 
-%黑体小四加粗顶左，单倍行距，序号与题目间空一个汉字符
+%黑体四号加粗顶左，单倍行距，序号与题目间空一个汉字符
 
 \ctexset{subsection={
-		format = {\bfseries \sffamily \raggedright \zihao{-4}},
+        number = {\arabic{chapter}.\arabic{section}.\arabic{subsection}},
+        % format = { \bfseries \sffamily \raggedright \zihao{-4}},
+		format = {\raggedright \heiti \zihao{4}},
 		beforeskip =28bp plus 1ex minus .2ex,
 		afterskip = 24bp plus .2ex,
 		fixskip = true,
