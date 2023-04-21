@@ -23,7 +23,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setmainfont{Times New Roman}
 
+% 解决双面包括封面的问题，被包含的内容不分奇偶
+\makeatletter
+\newcommand{\openany}{\@openrightfalse}
+\newcommand{\openright}{\@openrighttrue}
+\makeatother
+
 \begin{document}
+	%%%%%%%% 开始 %%%%%%%%
+	\openany
+	
 	\makecover
 	\makeAuthorization
 	\makeInfo
@@ -31,11 +40,12 @@
 	\include{chapters/abstract}   								 %中文摘要
 	\include{chapters/englishabstract}  							 %英文摘要
      \include{chapters/preface}                                             %序言
-
-	
 	
 	\tableofcontents
      \newpage\pagenumbering{arabic}
+	
+	%%%%%%%% 结束 %%%%%%%%
+        \openright
 
      %正文部分
      \include{chapters/chapter01} 								%引言
