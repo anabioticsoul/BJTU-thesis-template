@@ -31,4 +31,5 @@ e.g.
 #### 编译前
 请选择`XeLaTeX`作为编译器进行编译，Overleaf和TeX live都可以使用
 
+#### 致谢
 鸣谢[bigworldsmall](https://github.com/bigworldsmall) 
