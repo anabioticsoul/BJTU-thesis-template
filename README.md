@@ -31,4 +31,4 @@ e.g.
 #### 编译前
 请选择`XeLaTeX`作为编译器进行编译，Overleaf和TeX live都可以使用
 
-论文模板由[bigworldsmall](https://github.com/bigworldsmall) 提供
+鸣谢[bigworldsmall](https://github.com/bigworldsmall) 
