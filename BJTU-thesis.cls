@@ -179,7 +179,7 @@
 }{}
 
 %定义中英文关键词命令
-\newcommand{\keywords}[1]{\textbf{关键词：}#1}
+\newcommand{\keywords}[1]{\songti\textbf{关键词：}#1}
 \newcommand{\englishkeywords}[1]{\textbf{KEYWORDS:~}#1}
 
 %定义英文摘要环境
