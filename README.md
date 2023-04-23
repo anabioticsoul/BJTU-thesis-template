@@ -16,7 +16,6 @@
 ##### 必须修改
 请在main.tex中修改如下参数
 
-e.g.
 ```latex
 \documentclass[AcMaster]{BJTU-thesis}      %%%    选择模板为学硕
 ```
@@ -29,6 +28,12 @@ e.g.
 ```
 
 2. 在`BJTU-thesis.cls`文件中将单面打印换成双面打印
+
+##### 中文字体加粗问题
+Overleaf和TeXstudio加载的库不同，使用TeXstudio加粗文字时，需要加入`\songti`。（只用\textbf对中文加粗无效）
+```latex
+\songti\textbf{加粗}
+```
 
 #### 编译前
 请选择`XeLaTeX`作为编译器进行编译，Overleaf和TeX live都可以使用
