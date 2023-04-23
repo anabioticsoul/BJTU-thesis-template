@@ -2,10 +2,20 @@
 %%% 单面论文
 % \documentclass[AcMaster]{BJTU-thesis}  
 %%% 双面论文
-\documentclass[AcMaster,twoside]{BJTU-thesis} 
+\documentclass[AcMaster,twoside]{BJTU-thesis}
 %%EnMaster专硕
 %%AcMaster学硕
  %%Doctor学博
+
+%%%%%%%%%%%%%%%%%%%     字体     %%%%%%%%%%%%%%%%%%%%%
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}  				   %%% Overleaf 和 TexStudio 字体库不同，使用Overleaf时请注释
+
+
+% 标题宋体加粗问题
+\setCJKfamilyfont{zhsong}[AutoFakeBold = {2.17}]{SimSun}   %%% Overleaf 和 TexStudio 字体库不同，使用Overleaf时请注释
+\renewcommand*{\songti}{\CJKfamily{zhsong}}                %%% Overleaf 和 TexStudio 字体库不同，使用Overleaf时请注释
+
 
 %%%%%%%%%%%%%%%%%填写封面信息%%%%%%%%%%%%%%%%%%%%%%%%
 \author{张三}                                  %作者姓名
@@ -20,8 +30,8 @@
 \datetime{2019年6月}                           %编辑日期
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setmainfont{Times New Roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 % 解决双面包括封面的问题，被包含的内容不分奇偶
 \makeatletter
