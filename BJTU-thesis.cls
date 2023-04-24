@@ -107,7 +107,7 @@
 \newcommand{\makeInfo}{
 	\newpage
 	\pagenumbering{roman}
-	\thispagestyle{plain}
+	\thispagestyle{myStyle}
 	{\songti\zihao{5}\noindent\BJTU@label@schoolNumber\BJTU@value@schoolNumber}
 	\hfill
 	{\songti\zihao{5}\BJTU@label@classification\BJTU@value@classification}
@@ -117,12 +117,12 @@
 		{\kaishu\zihao{0}北~京~交~通~大~学\\}
 		%这里控制上下间距
 		\if@isDoctor
-		{\songti\zihao{2}博~士~学~位~论~文\\}
+		{\songti\zihao{2}\bfseries{博~士~学~位~论~文}\\}
 		\else
         \if@isAcMaster
-        {\songti\zihao{2}硕~士~学~位~论~文\\}
+        {\songti\zihao{2}\bfseries{硕~士~学~位~论~文}\\}
         \else
-        {\songti\zihao{2}硕~士~专~业~学~位~论~文\\}
+        {\songti\zihao{2}\bfseries{硕~士~专~业~学~位~论~文}\\}
         \fi
 		\fi
 		%这里控制上下间距
@@ -158,7 +158,7 @@
 
 %重新定义致谢环境
 \renewenvironment{thanks}{
-	\chapter*{致谢}\thispagestyle{plain}
+	\chapter*{致谢}\thispagestyle{myStyle}
 }{}
 
 
@@ -236,7 +236,12 @@
 	\fancyfoot[C]{\footnotesize\thepage}
 }
 
-
+% 定义去掉页眉横线，页码为小五号字（内封和致谢用）
+\fancypagestyle{myStyle}{
+        \renewcommand{\headrulewidth}{0pt}
+        % 页码字体大小
+	\fancyfoot[C]{\zihao{-5}\thepage}
+}
 
 %%设置页边距和装订线
 \usepackage[
@@ -377,6 +382,7 @@ headheight=15pt
 	\vspace{50pt}
 	\begin{figure}
 		\centering
+		\vspace{60pt}
 		\includegraphics*[width=10.77cm,height=2.78cm]{schoolName}
 	\end{figure}
 	\vspace{18pt}
