@@ -388,12 +388,12 @@ headheight=15pt
 	\vspace{18pt}
 	\begin{center}
 		\if@isDoctor
-		{\songti\zihao{2}\bfseries{博士学位论文\\}}
+		{\songti\zihao{2}\bfseries{博~士~学~位~论~文\\}}
 		\else
         \if@isAcMaster
-        {\songti\zihao{2}\bfseries{硕士学位论文\\}}
+        {\songti\zihao{2}\bfseries{硕~士~学~位~论~文\\}}
         \else
-        {\songti\zihao{2}\bfseries{硕士专业学位论文\\}}
+        {\songti\zihao{2}\bfseries{硕~士~专~业~学~位~论~文\\}}
         \fi	
 		\fi
 		\vspace{44pt}
