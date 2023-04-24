@@ -30,8 +30,14 @@
 \datetime{2019年6月}                           %编辑日期
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%   单双页   %%%%%%%%%%%%%%%%%%%%%%%%%%
+% 插入空白页
+\usepackage{afterpage}
+\newcommand\myemptypage{
+    \newpage\thispagestyle{empty}\null
+    % \addtocounter{page}{-1}
+    \newpage
+}
 
 % 解决双面包括封面的问题，被包含的内容不分奇偶
 \makeatletter
@@ -43,53 +49,69 @@
 \raggedbottom
 
 \begin{document}
-	%%%%%%%% 开始 %%%%%%%%
-	\openany
-	
+
+        %%%%%%%  被包含的内容不分奇偶  %%%%%%%%%%%%
+        \openany
 	\makecover
+        % 空白页1
+        \myemptypage
+
+        % 版权
 	\makeAuthorization
+        % 空白页2
+        \myemptypage
+
+        % 内封
 	\makeInfo
-	\include{chapters/thanks} 									 %致谢部分
-	\include{chapters/abstract}   								 %中文摘要
-	\include{chapters/englishabstract}  							 %英文摘要
-     \include{chapters/preface}                                             %序言
+        % 空白页3
+        \myemptypage
+ 
+        \include{chapters/thanks} 								 %致谢部分
+        % 空白页4
+        \myemptypage
+        
+        \openright
+        %%%%%%%  被包含的内容不分奇偶  %%%%%%%%%%%%
+        
+	\include{chapters/abstract}   							 %中文摘要
+	\include{chapters/englishabstract}  					 %英文摘要
+     % \include{chapters/preface}                                %序言
+
 	
 	\tableofcontents
      \newpage\pagenumbering{arabic}
-	
-	%%%%%%%% 结束 %%%%%%%%
-        \openright
-
+ 
+        
+ 
      %正文部分
      \include{chapters/chapter01} 								%引言
      \include{chapters/chapter02} 								%第二章
-	\include{chapters/chapter03} 								%第三章
-	\include{chapters/chapter04} 								%第四章
-	\include{chapters/chapter05} 								%第五章
+     \include{chapters/chapter03} 								%第三章
+     \include{chapters/chapter04} 								%第四章
+     \include{chapters/chapter05} 								%第五章
+     \include{chapters/chapter06} 								%第六章
 
-
-
-	%%%%%%%% 开始 %%%%%%%%
-	\openany
-	
 	\nocite{*}
+         
 	\bibliography{reference/ref}
 
      \backmatter
-	\begin{appendix}
-		\input{chapters/appendix01}
-	\end{appendix}
 
-     \include{chapters/index}	
+     % 附录
+	% \begin{appendix}
+	% 	\input{chapters/appendix01}
+	% \end{appendix}
+
+    % 索引
+     % \include{chapters/index}	
+
 
 	\include{chapters/mresume}
 
 	\include{chapters/statement} 	
 
-     \include{chapters/dataset}	
-     
-	%%%%%%%% 结束 %%%%%%%%
-        \openright
+     \include{chapters/dataset}						
+
 
 \end{document}
 
