@@ -245,12 +245,14 @@
 
 %%设置页边距和装订线
 \usepackage[
-top=3.5cm,
+% top=3.5cm,
+top=3cm,
 bottom=2.5cm,
 left=2.5cm,
 right=2.5cm,
 bindingoffset=1cm,
-headheight=15pt
+headheight=15pt,
+headsep=18pt
 ]{geometry}
 
 %% 设置章节格式
@@ -259,8 +261,10 @@ headheight=15pt
 		number = {\arabic{chapter}},
 		format = {\heiti \centering \zihao{3}},
 		pagestyle = {BJTU@heading},
-		beforeskip = 28bp,
-		afterskip = 20bp,
+		% beforeskip = 28bp,
+		% afterskip = 20bp,
+		beforeskip = 26bp,
+		afterskip = 24bp,
 		fixskip = true,
 	}
 }
