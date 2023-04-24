@@ -29,10 +29,10 @@
 
 2. 在`BJTU-thesis.cls`文件中将单面打印换成双面打印
 
-##### 中文字体加粗问题
+##### 中文字体粗体问题
 Overleaf和TeXstudio加载的库不同，使用TeXstudio加粗文字时，需要加入`\songti`。（只用\textbf对中文加粗无效）
 ```latex
-\songti\textbf{加粗}
+\songti\textbf{粗体}
 ```
 
 #### 编译前
