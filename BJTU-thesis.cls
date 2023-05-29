@@ -239,6 +239,8 @@
 % 定义去掉页眉横线，页码为小五号字（内封和致谢用）
 \fancypagestyle{myStyle}{
         \renewcommand{\headrulewidth}{0pt}
+        \fancyhead[L]{~}
+        \fancyhead[R]{~}
         % 页码字体大小
 	\fancyfoot[C]{\zihao{-5}\thepage}
 }
