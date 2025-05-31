@@ -271,9 +271,47 @@ headsep=18pt
 	}
 }
 
+%% 附录
+\let\@appendix\appendix
+\renewenvironment{appendix}{%
+ \@appendix
+ \gdef\@chapapp{\appendixname~\thechapter}
+ % \renewcommand\theequation{\ifnum \c@chapter>\z@ \thechapter-\fi\@arabic\c@equation}
+ }{}
+ 
+\newif\if@appendix % 定义布尔变量
+
+% 定义章节编号
+% \renewcommand{\thechapter}{\arabic{chapter}}
+
+% \appendix 命令，设置布尔变量并改变编号
+\def\appendix{%
+  \setcounter{chapter}{1}%
+  \@appendixtrue
+  % \renewcommand{\thechapter}{\Alph{chapter}}%
+}
+
+% 根据附录来调整 section 编号
+\renewcommand{\thesection}{%
+  \if@appendix
+    \Alph{chapter}.\arabic{section}%
+  \else
+    \arabic{chapter}.\arabic{section}%
+  \fi
+}
+
+% 根据附录来调整 subsection 编号
+\renewcommand{\thesubsection}{%
+  \if@appendix
+    \Alph{chapter}.\arabic{section}.\arabic{subsection}%
+  \else
+    \arabic{chapter}.\arabic{section}.\arabic{subsection}%
+  \fi
+}
+
 %% 设置一级章节格式
 \ctexset{section={
-        number = {\arabic{chapter}.\arabic{section}},
+        % number = {\arabic{chapter}.\arabic{section}},
         % format={\raggedright \sffamily \bfseries \zihao{4}},
 		format={\raggedright \heiti \zihao{-3}},
 		beforeskip = 28bp plus 1ex minus .2ex,
@@ -287,7 +325,7 @@ headsep=18pt
 %黑体四号加粗顶左，单倍行距，序号与题目间空一个汉字符
 
 \ctexset{subsection={
-        number = {\arabic{chapter}.\arabic{section}.\arabic{subsection}},
+        % number = {\arabic{chapter}.\arabic{section}.\arabic{subsection}},
         % format = { \bfseries \sffamily \raggedright \zihao{-4}},
 		format = {\raggedright \heiti \zihao{4}},
 		beforeskip =28bp plus 1ex minus .2ex,
