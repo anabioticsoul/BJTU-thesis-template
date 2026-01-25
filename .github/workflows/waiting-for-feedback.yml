@@ -1,0 +1,25 @@
+name: Close issues waiting for feedback
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+
+jobs:
+  waiting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          only-labels: waiting-for-feedback
+          days-before-issue-stale: 7
+          days-before-issue-close: 3
+
+          stale-issue-message: >
+            已提供解决建议，请确认问题是否已解决。
+            若 7 天内无回复，将自动关闭该 issue。
+
+          close-issue-message: >
+            未收到确认回复，已自动关闭。
+            如仍有问题，可重新开启或新建 issue。
