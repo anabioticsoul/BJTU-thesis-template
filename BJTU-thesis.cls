@@ -2,10 +2,6 @@
 
 %===================================================
 
-%导入需要的宏包
-\RequirePackage{amsmath,amsthm,amsfonts,amssymb,bm,mathrsfs,upgreek,array, mathrsfs, times,indentfirst,multirow}
-\RequirePackage{fancyhdr}
-
 
 %依赖的Latex版本
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
@@ -33,6 +29,11 @@
 \LoadClass[zihao=-4,a4paper,oneside,openright,UTF8,space=auto]{ctexbook}
 \fi
 
+
+%导入需要的宏包
+\RequirePackage{amsmath,amsthm,amsfonts,amssymb,bm,mathrsfs,upgreek,array, mathrsfs, times,indentfirst,multirow}
+\RequirePackage{fancyhdr}
+\RequirePackage{booktabs}
 
 
 %定义使用者需要填写的标签
